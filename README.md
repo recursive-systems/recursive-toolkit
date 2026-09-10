@@ -1,6 +1,28 @@
 # Recursive Systems Toolkit
 
-Free AI workspace cleanup and app maturity reviews, packaged as Claude skills. The plugin contains instructions only: no hooks, MCP servers, or bundled executable scripts.
+Free AI workspace cleanup and app maturity reviews, packaged for ChatGPT, Codex, and Claude. The plugin contains instructions only: no hooks, MCP servers, or bundled executable scripts.
+
+## Install in the ChatGPT desktop app
+
+1. Open **Plugins → Add marketplace**.
+2. Enter `https://github.com/recursive-systems/recursive-toolkit` and click **Add marketplace**.
+3. Open **Personal** and click **+** beside **Recursive Systems**.
+4. Start a new chat and ask to use **Workspace Cleanup** or **App Maturity Review**.
+
+The repository marketplace installation flow was confirmed by the maintainer on September 10, 2026. The new OpenAI metadata and branded icon still need an app-level check after syncing this release. The plugin provides its own logo and descriptions; OpenAI's documented marketplace metadata supports a display name but does not specify a marketplace-level icon.
+
+Use the app's available marketplace sync/update controls to fetch releases. Automatic update timing and per-user opt-in behavior have not been verified. Standalone skill copies are not linked to marketplace updates; remove duplicate standalone copies after confirming the marketplace-installed skills are available.
+
+## Packaging
+
+- `.agents/plugins/marketplace.json`: OpenAI-format repository marketplace.
+- `.claude-plugin/marketplace.json`: Claude marketplace.
+- `plugins/recursive-systems/plugin.json`: portable Agent Plugins manifest with OpenAI branding under `extensions.com.openai.interface`.
+- `plugins/recursive-systems/.codex-plugin/plugin.json`: Codex compatibility manifest for hosts using the older format.
+- `plugins/recursive-systems/.claude-plugin/plugin.json`: Claude plugin manifest.
+- `plugins/recursive-systems/skills/`: shared, canonical skill instructions for both platforms.
+
+Keep the three plugin manifests' versions and common metadata synchronized. Keep OpenAI interface metadata identical in the portable and Codex compatibility manifests. Brand assets live in the plugin's `assets/` directory. No separate copy of the skills is needed.
 
 ## Install in Claude Code
 
@@ -54,11 +76,13 @@ claude plugin validate .
 claude plugin validate plugins/recursive-systems
 ```
 
-For every skill change, bump `version` in `plugins/recursive-systems/.claude-plugin/plugin.json`, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the plugin manifest is authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
+For every plugin release, bump `version` in all three plugin manifests, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the synchronized plugin manifests are authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
 
 The website keeps generated copies for standalone builds. From the website checkout, run `npm run tools:sync -- /path/to/recursive-toolkit`, then `npm run tools:check -- /path/to/recursive-toolkit`. Commit and release website changes separately. Its `src/tools/source.json` records the toolkit version, commit, and hashes. Adding a skill does not automatically add a website card.
 
 ## References
+
+- [OpenAI plugin packaging and branding](https://developers.openai.com/plugins/build/plugins)
 
 - [Claude plugin authoring](https://code.claude.com/docs/en/plugins)
 - [Marketplace updates](https://code.claude.com/docs/en/discover-plugins#configure-auto-updates)
