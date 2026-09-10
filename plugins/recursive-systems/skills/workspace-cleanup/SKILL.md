@@ -1,6 +1,6 @@
 ---
 name: workspace-cleanup
-description: Audit AI workspace skills, project instructions, and supporting files for duplication, conflicts, stale guidance, and potential retirement. Use when the user asks to clean up these resources; propose changes first unless edits are already authorized.
+description: Use current official model guidance to audit AI workspace skills, project instructions, and supporting files for duplication, conflicts, stale guidance, and potential retirement. Use when the user asks to clean up these resources; propose changes first unless edits are already authorized.
 ---
 
 Audit this project's AI skills, instructions, and supporting files. Recommend changes that reduce unnecessary context and maintenance while preserving useful behavior.

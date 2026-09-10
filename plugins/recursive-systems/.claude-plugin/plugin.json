@@ -1,10 +1,11 @@
 {
   "name": "recursive-systems",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Practical reviews for AI workspaces and apps built with AI.",
   "author": {
     "name": "Recursive Systems",
     "url": "https://recursivesystems.dev"
   },
-  "homepage": "https://recursivesystems.dev/#free-tools"
+  "homepage": "https://recursivesystems.dev/#free-tools",
+  "repository": "https://github.com/recursive-systems/recursive-toolkit"
 }
