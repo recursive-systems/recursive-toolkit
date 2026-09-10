@@ -1,0 +1,31 @@
+{
+  "name": "recursive-systems",
+  "version": "0.1.5",
+  "description": "Practical AI tools from Recursive Systems.",
+  "author": {
+    "name": "Recursive Systems",
+    "url": "https://recursivesystems.dev"
+  },
+  "homepage": "https://recursivesystems.dev/#free-tools",
+  "repository": "https://github.com/recursive-systems/recursive-toolkit",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Recursive Systems",
+    "shortDescription": "Practical AI tools from Recursive Systems.",
+    "longDescription": "Clean up AI workspace instructions and discover practical improvements for apps built with AI. Workspace Cleanup reviews skills and project guidance for duplication, conflicts, and stale instructions. App Maturity Review prioritizes improvements to architecture, testing, delivery, monitoring, and customer usage measurement. Includes two instruction-only skills; no hooks, connectors, or bundled executable scripts. Cleanup proposes changes unless edits are already authorized; app reviews make recommendations only.",
+    "developerName": "Recursive Systems",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://recursivesystems.dev",
+    "defaultPrompt": [
+      "Review my AI workspace for stale or conflicting guidance.",
+      "Review my app and prioritize practical engineering improvements."
+    ],
+    "brandColor": "#111111",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

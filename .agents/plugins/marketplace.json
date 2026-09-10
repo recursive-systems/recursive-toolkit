@@ -1,0 +1,20 @@
+{
+  "name": "recursive-systems",
+  "interface": {
+    "displayName": "Recursive Systems"
+  },
+  "plugins": [
+    {
+      "name": "recursive-systems",
+      "source": {
+        "source": "local",
+        "path": "./plugins/recursive-systems"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
