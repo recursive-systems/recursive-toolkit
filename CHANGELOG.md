@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6 (unreleased)
+
+Add the Business Loop Map recommendations-only skill and its external Claude Code, Claude Cowork, and ChatGPT desktop acceptance scenarios.
+
 ## 0.1.5
 
 Add an OpenAI-format marketplace and portable plugin manifest with OpenAI presentation metadata, a Codex compatibility manifest, and the Recursive Systems brand icon. Document ChatGPT desktop installation. Preserve Claude packaging and all skill instructions.

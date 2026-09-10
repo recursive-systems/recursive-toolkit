@@ -1,17 +1,25 @@
 # Recursive Systems Toolkit
 
-Free AI workspace cleanup and app maturity reviews, packaged for ChatGPT, Codex, and Claude. The plugin contains instructions only: no hooks, MCP servers, or bundled executable scripts.
+Free AI workspace cleanup, app maturity reviews, and business loop maps, packaged for ChatGPT, Codex, and Claude. The plugin contains instructions only: no hooks, MCP servers, or bundled executable scripts.
 
 ## Install in the ChatGPT desktop app
 
 1. Open **Plugins → Add marketplace**.
 2. Enter `https://github.com/recursive-systems/recursive-toolkit` and click **Add marketplace**.
 3. Open **Personal** and click **+** beside **Recursive Systems**.
-4. Start a new chat and ask to use **Workspace Cleanup** or **App Maturity Review**.
+4. Start a new chat and ask to use **Workspace Cleanup**, **App Maturity Review**, or **Business Loop Map**.
 
-The repository marketplace installation flow was confirmed by the maintainer on September 10, 2026. The new OpenAI metadata and branded icon still need an app-level check after syncing this release. The plugin provides its own logo and descriptions; OpenAI's documented marketplace metadata supports a display name but does not specify a marketplace-level icon.
+The repository marketplace installation flow was confirmed by the maintainer on September 10, 2026. The new OpenAI metadata and branded icon still need an app-level check after syncing a release. The plugin provides its own logo and descriptions; OpenAI's documented marketplace metadata supports a display name but does not specify a marketplace-level icon.
 
 Use the app's available marketplace sync/update controls to fetch releases. Automatic update timing and per-user opt-in behavior have not been verified. Standalone skill copies are not linked to marketplace updates; remove duplicate standalone copies after confirming the marketplace-installed skills are available.
+
+## Included capabilities
+
+- **Workspace Cleanup** audits AI workspace instructions and supporting files.
+- **App Maturity Review** recommends practical improvements for apps built with AI.
+- **Business Loop Map** maps recurring work and recommends safe first uses for AI.
+
+Actual host acceptance for Business Loop Map remains pending; no scenario execution is claimed. The 0.1.6 version metadata in this pull request is a release candidate, not a published or host-validated release.
 
 ## Packaging
 
@@ -36,9 +44,10 @@ Start a new Claude Code session and use:
 ```text
 /recursive-systems:workspace-cleanup
 /recursive-systems:app-maturity-review
+/recursive-systems:business-loop-map
 ```
 
-The assistant needs access to the project you want reviewed. Cleanup proposes changes unless editing is already authorized; app maturity review makes recommendations only.
+The assistant needs access to the project you want reviewed. Cleanup proposes changes unless editing is already authorized; app maturity review and business loop map make recommendations only.
 
 ## Keep it updated
 
@@ -59,9 +68,9 @@ Then start a new session. Do not edit installed cache files: an update replaces 
 1. Open **Customize → Plugins → Add plugin → Add marketplace → Add from a repository**.
 2. Enter `https://github.com/recursive-systems/recursive-toolkit.git`, select **Use URL**, leave **Sync automatically** enabled, and select **Sync**.
 3. Under **Personal → recursive-toolkit**, install **Recursive systems**.
-4. In a new Cowork conversation, type `/` and choose **app-maturity-review** or **workspace-cleanup**.
+4. In a new Cowork conversation, type `/` and choose **app-maturity-review**, **business-loop-map**, or **workspace-cleanup**.
 
-Desktop installation, visibility of both skills, and a Cowork app maturity review were verified on September 10, 2026. If Desktop says the plugin is enabled but cannot sync, **View → Reload** resolved that condition in our pilot.
+Desktop installation, visibility of Workspace Cleanup and App Maturity Review, and a Cowork app maturity review were verified on September 10, 2026. If Desktop says the plugin is enabled but cannot sync, **View → Reload** resolved that condition in our pilot.
 
 The marketplace menu offers **Check for updates**. Automatic syncing was enabled, but neither a completed Desktop release update nor its automatic timing has been verified yet. Our update test was interrupted by the desktop-control connection timing out; Desktop last showed 0.1.2 after 0.1.3 was published. Claude Code's manual update path above is verified separately.
 
@@ -76,7 +85,7 @@ claude plugin validate .
 claude plugin validate plugins/recursive-systems
 ```
 
-For every plugin release, bump `version` in all three plugin manifests, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the synchronized plugin manifests are authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
+Before a version bump, run the matching host scenarios in `evals/` and record results using the file's run-notes instructions. For every plugin release, bump `version` in all three plugin manifests, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the synchronized plugin manifests are authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
 
 The website keeps generated copies for standalone builds. From the website checkout, run `npm run tools:sync -- /path/to/recursive-toolkit`, then `npm run tools:check -- /path/to/recursive-toolkit`. Commit and release website changes separately. Its `src/tools/source.json` records the toolkit version, commit, and hashes. Adding a skill does not automatically add a website card.
 
