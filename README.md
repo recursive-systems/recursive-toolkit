@@ -54,7 +54,7 @@ claude plugin validate .
 claude plugin validate plugins/recursive-systems
 ```
 
-For every skill change, bump `version` in `plugins/recursive-systems/.claude-plugin/plugin.json`, update `CHANGELOG.md`, commit, and push. The marketplace deliberately does not repeat the version: the plugin manifest is authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
+For every skill change, bump `version` in `plugins/recursive-systems/.claude-plugin/plugin.json`, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the plugin manifest is authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
 
 The website keeps generated copies for standalone builds. From the website checkout, run `npm run tools:sync -- /path/to/recursive-toolkit`, then `npm run tools:check -- /path/to/recursive-toolkit`. Commit and release website changes separately. Its `src/tools/source.json` records the toolkit version, commit, and hashes. Adding a skill does not automatically add a website card.
 
