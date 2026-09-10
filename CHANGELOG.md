@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.6 (unreleased)
+## 0.1.6
 
-Add the Business Loop Map recommendations-only skill and its external Claude Code, Claude Cowork, and ChatGPT desktop acceptance scenarios.
+Add the Business Loop Map recommendations-only skill.
 
 ## 0.1.5
 

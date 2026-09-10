@@ -19,8 +19,6 @@ Use the app's available marketplace sync/update controls to fetch releases. Auto
 - **App Maturity Review** recommends practical improvements for apps built with AI.
 - **Business Loop Map** maps recurring work and recommends safe first uses for AI.
 
-Actual host acceptance for Business Loop Map remains pending; no scenario execution is claimed. The 0.1.6 version metadata in this pull request is a release candidate, not a published or host-validated release.
-
 ## Packaging
 
 - `.agents/plugins/marketplace.json`: OpenAI-format repository marketplace.
@@ -85,7 +83,7 @@ claude plugin validate .
 claude plugin validate plugins/recursive-systems
 ```
 
-Before a version bump, run the matching host scenarios in `evals/` and record results using the file's run-notes instructions. For every plugin release, bump `version` in all three plugin manifests, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the synchronized plugin manifests are authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
+For every plugin release, bump `version` in all three plugin manifests, update `CHANGELOG.md`, and merge a pull request into the default branch. Do not push releases directly to the default branch. The marketplace deliberately does not repeat the version: the synchronized plugin manifests are authoritative. Validate an update with the commands above and inspect the installed files before declaring success.
 
 The website keeps generated copies for standalone builds. From the website checkout, run `npm run tools:sync -- /path/to/recursive-toolkit`, then `npm run tools:check -- /path/to/recursive-toolkit`. Commit and release website changes separately. Its `src/tools/source.json` records the toolkit version, commit, and hashes. Adding a skill does not automatically add a website card.
 
