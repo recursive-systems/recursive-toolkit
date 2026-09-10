@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+Clarify the plugin listing description. No skill instructions changed. This release exercises Desktop/Cowork marketplace updates from 0.1.2.
+
 ## 0.1.2
 
 Add the public source repository to plugin metadata and clarify official model guidance in cleanup discovery. Approved prompt bodies are unchanged. This release exercises a GitHub-backed update from 0.1.1.
