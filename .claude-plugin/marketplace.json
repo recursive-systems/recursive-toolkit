@@ -1,0 +1,14 @@
+{
+  "name": "recursive-systems",
+  "owner": {
+    "name": "Recursive Systems",
+    "url": "https://recursivesystems.dev"
+  },
+  "plugins": [
+    {
+      "name": "recursive-systems",
+      "source": "./plugins/recursive-systems",
+      "description": "Practical reviews for AI workspaces and apps built with AI."
+    }
+  ]
+}

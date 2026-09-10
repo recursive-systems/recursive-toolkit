@@ -1,0 +1,1 @@
+The skill bodies are the approved website prompts. Preserve their meaning when packaging. Edit skills here, then generate website copies using its tools:sync command. Bump the plugin version for every release. Do not add hooks, connectors, or execution scripts without a concrete workflow need.
