@@ -1,6 +1,6 @@
 ---
 name: app-maturity-review
-description: Review an app built with AI and prioritize practical improvements to its architecture, database, tests, delivery, monitoring, and customer usage measurement. Use when the user asks for an app maturity or engineering readiness review; recommendations only.
+description: Review an app built with AI and prioritize practical improvements to its architecture, database, tests, delivery, monitoring, and customer usage measurement. Use when the user asks for an app maturity or engineering readiness review; recommendations only, with no time estimates.
 ---
 
 Review my app and recommend practical improvements to its design, development, and operation. Help me discover engineering concerns I may not know to ask about.

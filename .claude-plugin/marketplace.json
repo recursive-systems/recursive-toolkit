@@ -10,5 +10,8 @@
       "source": "./plugins/recursive-systems",
       "description": "Practical reviews for AI workspaces and apps built with AI."
     }
-  ]
+  ],
+  "metadata": {
+    "description": "Practical AI workflow tools from Recursive Systems."
+  }
 }
