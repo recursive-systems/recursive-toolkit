@@ -34,7 +34,16 @@ Then start a new session. Do not edit installed cache files: an update replaces 
 
 ## Claude Desktop / Cowork
 
-Open **Customize → Plugins**, add a marketplace from the repository URL above, and install **recursive-systems**. Use the marketplace's **Update** control to fetch releases. This flow is documented by Anthropic but has not yet been verified in our desktop pilot. There is no public directory listing or verified one-click installation link yet.
+1. Open **Customize → Plugins → Add plugin → Add marketplace → Add from a repository**.
+2. Enter `https://github.com/recursive-systems/recursive-toolkit.git`, select **Use URL**, leave **Sync automatically** enabled, and select **Sync**.
+3. Under **Personal → recursive-toolkit**, install **Recursive systems**.
+4. In a new Cowork conversation, type `/` and choose **app-maturity-review** or **workspace-cleanup**.
+
+Desktop installation, visibility of both skills, and a Cowork app maturity review were verified on September 10, 2026. If Desktop says the plugin is enabled but cannot sync, **View → Reload** resolved that condition in our pilot.
+
+The marketplace menu offers **Check for updates**. Automatic syncing was enabled, but neither a completed Desktop release update nor its automatic timing has been verified yet. Our update test was interrupted by the desktop-control connection timing out; Desktop last showed 0.1.2 after 0.1.3 was published. Claude Code's manual update path above is verified separately.
+
+There is no public directory listing or verified one-click installation link yet.
 
 ## Develop and release
 
