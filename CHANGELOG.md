@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+Broaden the plugin and marketplace descriptions to practical AI tools. No skill instructions changed.
+
 ## 0.1.3
 
 Clarify the plugin listing description. No skill instructions changed. This release exercises Desktop/Cowork marketplace updates from 0.1.2.

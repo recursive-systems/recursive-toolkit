@@ -8,10 +8,10 @@
     {
       "name": "recursive-systems",
       "source": "./plugins/recursive-systems",
-      "description": "AI workspace cleanup and app maturity reviews from Recursive Systems."
+      "description": "Practical AI tools from Recursive Systems."
     }
   ],
   "metadata": {
-    "description": "Practical AI workflow tools from Recursive Systems."
+    "description": "Practical AI tools from Recursive Systems."
   }
 }
