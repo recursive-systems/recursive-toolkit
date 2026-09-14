@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "recursive-systems",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Practical AI tools from Recursive Systems.",
   "author": {
     "name": "Recursive Systems",
@@ -14,7 +14,7 @@
       "interface": {
         "displayName": "Recursive Systems",
         "shortDescription": "Practical AI tools from Recursive Systems.",
-        "longDescription": "Clean up AI workspace instructions and discover practical improvements for apps built with AI. Workspace Cleanup reviews skills and project guidance for duplication, conflicts, and stale instructions. App Maturity Review prioritizes improvements to architecture, testing, delivery, monitoring, and customer usage measurement. Includes two instruction-only skills; no hooks, connectors, or bundled executable scripts. Cleanup proposes changes unless edits are already authorized; app reviews make recommendations only.",
+        "longDescription": "Clean up AI workspace instructions, discover practical improvements for apps built with AI, and map recurring business work. Workspace Cleanup reviews skills and project guidance for duplication, conflicts, and stale instructions. App Maturity Review prioritizes improvements to architecture, testing, delivery, monitoring, and customer usage measurement. Business Loop Map identifies recurring workflows and recommends safe first uses for AI. Includes three instruction-only skills; no hooks, connectors, or bundled executable scripts. Cleanup proposes changes unless edits are already authorized; app reviews and business loop maps make recommendations only.",
         "developerName": "Recursive Systems",
         "category": "Productivity",
         "capabilities": [
@@ -24,7 +24,8 @@
         "websiteURL": "https://recursivesystems.dev",
         "defaultPrompt": [
           "Review my AI workspace for stale or conflicting guidance.",
-          "Review my app and prioritize practical engineering improvements."
+          "Review my app and prioritize practical engineering improvements.",
+          "Map my recurring business workflows and recommend where AI should help first."
         ],
         "brandColor": "#111111",
         "composerIcon": "./assets/icon.png",
